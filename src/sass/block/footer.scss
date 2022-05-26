@@ -1,0 +1,75 @@
+.footer {
+    background-color: #313845;
+    padding: 60px 0 35px;
+    &__top {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        @include md {
+            flex-direction: column;
+        }
+    }
+    &__item:first-child {
+        margin-right: 10%;
+    }
+    &__item:last-child {
+        margin-right: 14%;
+    }
+    &__title {
+        color: #fff;
+        font-size: 23px;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        @include list-reset
+    }
+    &__list-item + &__list-item {
+        margin-top: 8px;
+    }
+    &__list-item a {
+        display: flex;
+        align-items: center;
+        color: #ADAFB5;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all .2s ease-in;
+        &:hover {
+            color: #fff;
+        }
+    }
+    &__list-item--dc svg,
+    &__list-item--tg  svg {
+        margin-left: 5px;
+    }
+    &__list-item--dc svg use,
+    &__list-item--tg  svg use {
+        text-decoration: none;
+        transition: stroke .2s ease-in;
+    }
+    &__list-item--dc svg use,
+    &__list-item--tg svg use {
+        stroke: #ADAFB5;
+    }
+    &__list-item--dc:hover svg use {
+        stroke: #C687DD;
+    }
+    &__list-item--dc:hover a {
+        color: #C687DD;
+    }
+    &__list-item--tg:hover svg use {
+        stroke: #77BAE0;
+    }
+    &__list-item--tg:hover a {
+        color: #77BAE0;
+    }
+    @include md {
+        &__item {
+            margin-bottom: 25px;
+        }
+    }
+}

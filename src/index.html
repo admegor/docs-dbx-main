@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    
+    @@include("html/chunk/svgsprite.html")
+    @@include("html/chunk/header.html")
+    <main class="main">
+        <div class="container">
+            <div class="main-blocks">
+                <div class="main-blocks__top">
+                    <div class="main-blocks__item main-blocks__item--basics">
+                        <a class="main-blocks__link" href="#"></a>
+                        <div class="main-blocks__inner">
+                            <div class="main-blocks__inner-top">
+                                <svg viewBox="0 0 60 60" class="svg-basics-dims">
+                                    <use xlink:href="#basics"></use>
+                                </svg>
+                                <h3 class="main-blocks__title">Basics</h3>
+                            </div>
+                            <div class="main-blocks__inner-text">Here you can learn more about how blockchain works.</div>
+                        </div>
+                    </div>
+                    <div class="main-blocks__item main-blocks__item--developers">
+                        <a class="main-blocks__link" href="#"></a>
+                        <div class="main-blocks__inner">
+                            <div class="main-blocks__inner-top">
+                                <svg viewBox="0 0 60 60" class="svg-for-developers-dims">
+                                    <use xlink:href="#for-developers"></use>
+                                </svg>
+                                <h3 class="main-blocks__title">For Developers</h3>
+                            </div>
+                            <div class="main-blocks__inner-text">Learn more about DBX Smart Network and how to deploy a contracts on our network.</div>
+                        </div>
+                    </div>
+                    <div class="main-blocks__item main-blocks__item--coming-soon">
+                        <a class="main-blocks__link" href="#"></a>
+                        <div class="main-blocks__inner">
+                            <div class="main-blocks__inner-top">
+                                <svg viewBox="0 0 60 57" class="svg-validate-dims">
+                                    <use xlink:href="#validate"></use>
+                                </svg>
+                                <h3 class="main-blocks__title">Validate</h3>
+                            </div>
+                            <div class="main-blocks__inner-text">Learn how you can run our node and how our rewards system works</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-blocks__bottom">
+                    <div class="main-blocks__item main-blocks__item--coming-soon">
+                        <a class="main-blocks__link" href="#"></a>
+                        <div class="main-blocks__inner">
+                            <div class="main-blocks__inner-top">
+                                <svg viewBox="0 0 60 60" class="svg-integrate-dims">
+                                    <use xlink:href="#integrate"></use>
+                                </svg>
+                                <h3 class="main-blocks__title">Integrate</h3>
+                            </div>
+                            <div class="main-blocks__inner-text">More information how you can use our network</div>
+                        </div>
+                    </div>
+                    <div class="main-blocks__item main-blocks__item--coming-soon">
+                        <a class="main-blocks__link" href="#"></a>
+                        <div class="main-blocks__inner">
+                            <div class="main-blocks__inner-top">
+                                <svg viewBox="0 0 60 57" class="svg-use-cases-dims">
+                                    <use xlink:href="#use-cases"></use>
+                                </svg>
+                                <h3 class="main-blocks__title">Use cases</h3>
+                            </div>
+                            <div class="main-blocks__inner-text">More information how you can use our network</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include("html/chunk/footer.html")
+    
+    <script src="../js/main.js" defer></script>
+</body>
+
+</html>
