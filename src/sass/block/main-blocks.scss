@@ -1,22 +1,21 @@
 .main-blocks {
     margin: 50px auto;
-    &__top,
-    &__bottom {
-        display: flex;
-        width: 100%;
-        @include md {
-            flex-direction: column;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(178px, 1fr);
+    grid-gap: 20px;
+    @include md {
+        display: block;
+        &__item +  &__item {
+            margin-top: 20px;
         }
     }
-    &__top {
-        margin-bottom: 20px;
-    }
     &__item {
-        width: 100%;
-        padding: 30px;
+        padding: 28px;
         border: 2px solid;
         position: relative;
-        min-height: 178px;
+        min-height: 175px;
         &--basics {
             border-color: $green;
         }
@@ -27,12 +26,16 @@
             border-color: $black-light;
             pointer-events: none;
         }
-    }
-    &__item:not(:first-child) {
-        margin-left: 20px;
-        @include md {
-            margin-left: 0;
-            margin-top: 20px;
+        &:nth-child(4) {
+            grid-row-start: 2;
+            grid-column: 1 / span 6;
+        }
+        &:nth-child(5) {
+            grid-row-start: 2;
+            grid-column: 7 / span 6;
+        }
+        &:nth-child(-1n + 3) {
+            grid-column: span 4;
         }
     }
     &__link {
@@ -48,11 +51,15 @@
         margin-bottom: 20px;
         & svg {
             margin-right: 30px;
+            width: 60px;
+            height: 60px;
         }
     }
     &__title {
         margin: 0;
         color: $black;
+        @include adaptiv-font(23, 18);
+        font-optical-sizing: auto;
     }
     &__item--coming-soon &__title {
         color: $grey;
@@ -63,13 +70,14 @@
         position: absolute;
         top: -2px;
         right: -2px;
-        padding: 10px 15px;
+        padding: 0.6em 1em;
         font-weight: 400;
         text-transform: uppercase;
         color: $black;
         background-color: $yellow;
-        @include md {
-            font-size: 12px;
-        }
+        @include adaptiv-font(15, 12);
+    }
+    &__inner-text {
+        @include adaptiv-font(16, 12);
     }
 }

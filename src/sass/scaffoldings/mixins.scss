@@ -47,10 +47,8 @@ $maxWidth: 1550;
     padding: 0;
 }
 
-@include font("Montserrat","Montserrat-Regular","400","normal");
-@include font("Montserrat","Montserrat-Medium","500","normal");
-@include font("Montserrat","Montserrat-SemiBold","600","normal");
-@include font("Montserrat","Montserrat-Bold","700","bold");
+@include font("Inter","Inter-Regular","400","normal");
+@include font("Inter","Inter-SemiBold","600","normal");
 
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
